@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Paste your copied Resend key inside the quotes below
-RESEND_API_KEY = "PASTE_YOUR_COPIED_RESEND_KEY_HERE"
+RESEND_API_KEY = st.secrets["RESEND_API_KEY"]
 
 def send_live_email(to_email, group_name, prayer_focus):
     url = "https://api.resend.com/emails"
